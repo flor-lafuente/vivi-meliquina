@@ -29,6 +29,17 @@ h2 {
 }
 
 @media (max-width: 768px) {
+  #cabanas {
+    padding: 4rem 1rem;
+  }
+  .title-container {
+    gap: 0.5rem;
+    flex-direction: column;
+  }
+  h2 {
+    font-size: 1.8rem;
+    margin: 0;
+  }
   .cabana-list {
     grid-template-columns: 1fr; 
   }

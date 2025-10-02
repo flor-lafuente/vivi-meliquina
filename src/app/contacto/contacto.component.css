@@ -141,6 +141,20 @@ h2 {
 }
 
 @media (max-width: 768px) {
+  #contacto {
+    padding: 4rem 1rem;
+    background-color: #f8f9fa;
+    text-align: center;
+  }
+  .title-container {
+    padding: 0 2rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+    margin-top: 0;
+  }
   .contacto-container {
     flex-direction: column;
   }

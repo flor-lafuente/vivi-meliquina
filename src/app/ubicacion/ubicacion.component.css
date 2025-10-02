@@ -6,9 +6,10 @@
 
 .title-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 .title-container img {
@@ -17,9 +18,10 @@
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: #2c3e50;
+  margin:0;
 }
 
 .ubicacion-container {
@@ -80,6 +82,13 @@ h2 {
 }
 
 @media (min-width: 769px) {
+  .title-container {
+    flex-direction: row;
+    margin-bottom: 2rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
   .ubicacion-container {
     flex-direction: row;
     justify-content: space-between;

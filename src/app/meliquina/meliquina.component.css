@@ -17,7 +17,7 @@
   text-align: left;
 }
 
-.text-content h2 {
+h2 {
   font-size: 2.5rem;
   font-weight: 700;
   color: #2c3e50;
@@ -121,6 +121,21 @@
 }
 
 @media (max-width: 768px) {
+  #meliquina {
+    padding: 4rem 1rem;
+    background-color: #f8f9fa;
+  }  
+  .title-container {
+    gap: 0.5rem;
+    flex-direction: column;
+  }
+  h2 {
+    font-size: 1.8rem;
+    margin: 0;
+  }
+  .text-content {
+    text-align: center;
+  }
   .meliquina-container {
     flex-direction: column;
     text-align: center;

@@ -184,6 +184,17 @@ h3 {
 }
 
 @media (max-width: 768px) {
+  #chalet {
+    padding: 4rem 1rem;
+  }
+  .title-container {
+    gap: 0.5rem;
+    flex-direction: column;
+  }
+  h2 {
+    font-size: 1.8rem;
+    margin: 0;
+  }
   .chalet-card-grande {
     flex-direction: column;
     gap: 1.5rem;
