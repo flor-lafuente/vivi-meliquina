@@ -36,7 +36,7 @@ export class CabanasComponent {
     ],
     opciones: [
       {
-        nombre: 'Cabaña El Maitén',
+        nombre: 'Cabaña Lihuen',
         imagenes: ['/assets/images/cabanas-2-cuadrada.webp', '/assets/images/cabanas-2.webp', '/assets/images/cabanas-3.webp']
       },
       {
