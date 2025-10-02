@@ -7,10 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-  isMenuOpen = false; // Estado inicial del menú: cerrado
+  isMenuOpen = false;
 
   toggleMenu() {
-    this.isMenuOpen = !this.isMenuOpen; // Cambia el estado del menú
+    this.isMenuOpen = !this.isMenuOpen;
   }
 
 }

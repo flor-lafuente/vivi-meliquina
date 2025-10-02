@@ -6,7 +6,6 @@ export interface Chalet {
   descripcion: string;
   comodidades: string[];
   imagenes: string[];
-  // ¡NUEVO CAMPO AQUÍ!
   serviciosCercanos: string[];
 }
 
@@ -31,7 +30,6 @@ export class ChaletComponent {
     ]
   };
 
-// Propiedades y métodos para el carrusel
   currentIndex: number = 0;
 
   nextImage(): void {

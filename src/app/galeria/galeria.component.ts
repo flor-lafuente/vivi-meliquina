@@ -49,19 +49,18 @@ export class GaleriaComponent implements OnInit {
 
   activeGallery: string[] = [];
   selectedImage: string | null = null;
-  isLoading: boolean = false; // Variable para controlar el estado de carga
+  isLoading: boolean = false;
 
   ngOnInit() {
-    this.showGallery('general'); // Muestra la galería general al inicio
+    this.showGallery('general');
   }
 
   showGallery(galleryName: 'cabana1' | 'cabana2' | 'chalet' | 'general') {
-    this.isLoading = true; // Activa el loader
+    this.isLoading = true;
 
-    // Simula un retardo de carga para que el loader sea visible
     setTimeout(() => {
       this.activeGallery = this.galerias[galleryName];
-      this.isLoading = false; // Desactiva el loader una vez que las fotos se "cargan"
-    }, 500); // 500 milisegundos de retardo
+      this.isLoading = false;
+    }, 500);
   }
 }

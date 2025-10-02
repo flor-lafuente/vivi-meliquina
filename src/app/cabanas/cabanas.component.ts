@@ -10,18 +10,16 @@ export interface CabanaTipo {
     nombre: string;
     imagenes: string[];
   }[];
-  // ¡NUEVO CAMPO AQUÍ!
   serviciosCercanos: string[];
 }
 @Component({
   selector: 'app-cabanas',
-  standalone: true, // Si es un componente standalone
+  standalone: true,
   imports: [CabanaCardComponent],
   templateUrl: './cabanas.component.html',
   styleUrl: './cabanas.component.css'
 })
 export class CabanasComponent {
-  // Ahora tenemos un solo objeto para un tipo de cabaña
   cabanas: CabanaTipo = {
     tipoNombre: 'Cabañas Lihuen',
     capacidad: 'Hasta 4 personas',
@@ -46,7 +44,6 @@ export class CabanasComponent {
         imagenes: ['/assets/images/cabanas.webp', '/assets/images/cabanas.webp', '/assets/images/cabanas.webp']
       }
     ], 
-    // ¡NUEVOS DATOS AQUÍ!
     serviciosCercanos: [
       'Almacén La Esquina (a 500m)',
       'Restaurante Del Bosque (a 1km)',

@@ -11,7 +11,7 @@ import { CabanaTipo } from '../cabanas.component';
 export class CabanaCardComponent implements OnInit {
   @Input() cabanaTipo!: CabanaTipo;
   
-  currentIndex: number = 0; // Para el carrusel de imágenes
+  currentIndex: number = 0;
 
   ngOnInit(): void {
     // Si en un futuro hay más de una cabaña, esto se puede manejar con botones
@@ -19,7 +19,6 @@ export class CabanaCardComponent implements OnInit {
   }
 
   nextImage(): void {
-    // Apuntamos a la primera opción de cabaña (índice 0)
     const totalImages = this.cabanaTipo.opciones[0].imagenes.length;
     this.currentIndex = (this.currentIndex + 1) % totalImages;
   }
