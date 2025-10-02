@@ -35,7 +35,7 @@ export class GaleriaComponent implements OnInit {
       '/assets/images/piukewen-14.webp',
       '/assets/images/piukewen-15.webp',
     ],
-    general: [
+    meliquina: [
       '/assets/images/galeria-meliquina-1.webp',
       '/assets/images/galeria-meliquina-2.webp',
       '/assets/images/galeria-meliquina-3.webp',
@@ -52,10 +52,10 @@ export class GaleriaComponent implements OnInit {
   isLoading: boolean = false;
 
   ngOnInit() {
-    this.showGallery('general');
+    this.showGallery('chalet');
   }
 
-  showGallery(galleryName: 'cabana1' | 'cabana2' | 'chalet' | 'general') {
+  showGallery(galleryName: 'cabana1' | 'cabana2' | 'chalet' | 'meliquina') {
     this.isLoading = true;
 
     setTimeout(() => {
