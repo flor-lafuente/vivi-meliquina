@@ -1,0 +1,47 @@
+<section id="chalet">
+  <h2>Nuestro Chalet</h2>
+  <div class="chalet-card-grande">
+    <div class="carousel-container">
+      <div class="carousel">
+        <img [src]="chalet.imagenes[currentIndex]" [alt]="'Foto del chalet ' + chalet.nombre + ' ' + (currentIndex + 1)">
+        <button class="prev" (click)="prevImage()">&#10094;</button>
+        <button class="next" (click)="nextImage()">&#10095;</button>
+      </div>
+      <div class="carousel-dots">
+        @for(image of chalet.imagenes; track $index) {
+          <span [class.active]="$index === currentIndex" (click)="goToImage($index)"></span>
+        }
+      </div>
+    </div>
+
+    <div class="chalet-info-comun">
+      <h3>{{ chalet.nombre }}</h3>
+      <p class="chalet-subtitle">{{ chalet.capacidad }}</p>
+      <p class="chalet-description">{{ chalet.descripcion }}</p>
+
+      <div class="comodidades">
+        <h4>Comodidades:</h4>
+        <ul>
+          @for(comodidad of chalet.comodidades; track comodidad) {
+            <li>
+              <span class="material-icons">check_circle</span>
+              {{ comodidad }}
+            </li>
+          }
+        </ul>
+      </div>
+
+      <div class="servicios-cercanos">
+        <h4>Servicios Cercanos:</h4>
+        <ul>
+          @for(servicio of chalet.serviciosCercanos; track servicio) {
+            <li>
+              <span class="material-icons">directions_walk</span>
+              {{ servicio }}
+            </li>
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

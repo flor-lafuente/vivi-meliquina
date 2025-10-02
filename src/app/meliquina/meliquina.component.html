@@ -1,0 +1,29 @@
+<section id="meliquina">
+  <div class="meliquina-container">
+    <div class="text-content">
+      <h2>Sobre Villa Lago Meliquina</h2>
+      <p>
+        Ubicado en el corazón de la Patagonia, Meliquina es un pintoresco pueblo de montaña que te invita a conectar con la naturaleza. Rodeado de imponentes montañas, bosques de lengas y lagos cristalinos, ofrece una experiencia única durante todo el año.
+      </p>
+      <p>
+        Desde senderismo y deportes acuáticos en verano hasta esquí y snowboard en invierno, este destino es el punto de partida perfecto para explorar el Parque Nacional Lanín y la Ruta de los Siete Lagos.
+      </p>
+    </div>
+
+    <div class="carousel-container">
+      <div class="carousel">
+        <img [src]="images[currentIndex]" alt="Paisaje de Meliquina">
+        <button class="prev" (click)="prevImage()">&#10094;</button>
+        <button class="next" (click)="nextImage()">&#10095;</button>
+      </div>
+      <div class="carousel-dots">
+        @for(image of images; track $index){
+        <span 
+              [class.active]="$index === currentIndex"
+              (click)="goToImage($index)">
+        </span>
+        }
+      </div>
+    </div>
+  </div>
+</section>

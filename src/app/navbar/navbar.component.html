@@ -1,0 +1,14 @@
+<nav>
+  <a href="#inicio" class="logo">Piukewen & Lihuen</a>
+  <button class="menu-toggle" (click)="toggleMenu()">
+    <span class="material-icons">menu</span>
+  </button>
+  <ul class="menu" [class.open]="isMenuOpen">
+    <li><a href="#meliquina" (click)="toggleMenu()">Sobre Meliquina</a></li>
+    <li><a href="#cabanas" (click)="toggleMenu()">Cabañas</a></li>
+    <li><a href="#chalet" (click)="toggleMenu()">Chalet</a></li>
+    <li><a href="#galeria" (click)="toggleMenu()">Galería</a></li>
+    <li><a href="#ubicacion" (click)="toggleMenu()">Ubicación</a></li>
+    <li><a href="#contacto" (click)="toggleMenu()">Contacto</a></li>
+  </ul>
+</nav>

@@ -1,0 +1,43 @@
+<section id="ubicacion">
+  <h2>Ubicación</h2>
+  <div class="ubicacion-container">
+    <div class="ubicacion-content">
+      <p class="ubicacion-description">Nos encontramos en un lugar privilegiado de Villa Lago Meliquina, a menos de 1km del Lago Meliquina. Haz clic en la dirección para ver la ubicación en el mapa.</p>
+      
+      <div class="direccion" 
+           (click)="selectMap('cabanas')" 
+           [class.active]="selectedMapUrl === mapUrls.cabanas">
+        <span class="material-icons">place</span>
+        <p>
+          <strong>Dirección Cabañas :</strong>
+          <br>
+          Avenida de los Siete Lagos 1234
+          <br>
+          San Martín de los Andes, Neuquén
+        </p>
+      </div>
+      
+      <div class="direccion" 
+           (click)="selectMap('chalet')" 
+           [class.active]="selectedMapUrl === mapUrls.chalet">
+        <span class="material-icons">place</span>
+        <p>
+          <strong>Dirección Chalet Piukewen:</strong>
+          <br>
+          Avenida de los Siete Lagos 1234
+          <br>
+          San Martín de los Andes, Neuquén
+        </p>
+      </div>
+    </div>
+
+    <div class="map-container">
+      <iframe [src]="selectedMapUrl | safeUrl" 
+              width="600" 
+              height="450" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy"></iframe>
+    </div>
+  </div>
+</section>

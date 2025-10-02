@@ -1,0 +1,33 @@
+<section id="galeria">
+  <h2>Galería</h2>
+  <p class="galeria-description">Explora la belleza de Meliquina y nuestras opciones de alojamiento.</p>
+
+  <div class="gallery-selector">
+    <button (click)="showGallery('chalet')" [class.active]="activeGallery === galerias.chalet">Chalet</button>
+    <button (click)="showGallery('cabana1')" [class.active]="activeGallery === galerias.cabana1">Cabaña El Maitén</button>
+    <button (click)="showGallery('general')" [class.active]="activeGallery === galerias.general">Meliquina</button>
+  </div>
+
+  <div class="gallery-container">
+    @if(isLoading) {
+      <div class="loader-container">
+        <div class="loader"></div>
+      </div>
+    } @else {
+      <div class="image-grid">
+        @for(image of activeGallery; track image) {
+          <div class="image-item" (click)="selectedImage = image">
+            <img [src]="image" alt="Imagen del complejo">
+          </div>
+        }
+      </div>
+    }
+  </div>
+
+  @if(selectedImage) {
+    <div class="image-modal" (click)="selectedImage = null">
+        <img [src]="selectedImage" alt="Imagen ampliada" (click)="$event.stopPropagation()">
+        <span class="close-button" (click)="selectedImage = null">&times;</span>
+    </div>
+  }
+</section>

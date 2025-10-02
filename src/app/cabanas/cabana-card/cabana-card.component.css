@@ -1,0 +1,251 @@
+.cabana-card-grande {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: flex-start;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.cabana-card-grande:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.cabana-info-comun {
+  flex: 1 1 50%;
+  text-align: left;
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0 0 0.5rem;
+}
+
+.card-subtitle {
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin: 0 0 1rem;
+  font-weight: 500;
+}
+
+.card-description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.carousel-container {
+  flex: 1 1 50%;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.carousel img {
+  width: 100%;
+  height: 400px;
+  object-fit: contain;
+  display: block;
+}
+
+.carousel-options {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.carousel-options span {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  background-color: #f0f0f0;
+  color: #555;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.carousel-options span:hover {
+  background-color: #e0e0e0;
+}
+
+.carousel-options span.active {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.comodidades {
+  text-align: left;
+}
+
+.comodidades h4 {
+  font-size: 1rem;
+  color: #34495e;
+  margin-bottom: 0.75rem;
+}
+
+.comodidades ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.comodidades li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.comodidades .material-icons {
+  font-size: 1rem;
+  color: #27ae60;
+  margin-right: 0.5rem;
+}
+
+.servicios-cercanos {
+  text-align: left;
+  margin-top: 2rem;
+}
+
+.servicios-cercanos h4 {
+  font-size: 1rem;
+  color: #34495e;
+  margin-bottom: 0.75rem;
+}
+
+.servicios-cercanos ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.servicios-cercanos li {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.servicios-cercanos .material-icons {
+  font-size: 1rem;
+  color: #e67e22;
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .cabana-card-grande {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .cabana-info-comun {
+    text-align: center;
+  }
+
+  .comodidades {
+    text-align: center;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .comodidades ul {
+    display: inline-block;
+    text-align: left;
+  }
+}
+
+.carousel-container {
+  flex: 1 1 50%;
+  position: relative;
+  margin: 0;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 1rem;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  transition: 0.6s ease;
+  user-select: none;
+  background-color: rgba(0,0,0,0.5);
+  border: none;
+}
+
+.next {
+  right: 0;
+}
+
+.prev {
+  left: 0;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.carousel-dots {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.carousel-dots span {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.carousel-dots .active {
+  background-color: #3498db;
+}
+
+.carousel-dots span:hover {
+  background-color: #717171;
+}
+
+@media (max-width: 768px) {
+  .carousel img {
+    height: 250px;
+  }
+}

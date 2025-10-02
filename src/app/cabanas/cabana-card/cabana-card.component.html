@@ -1,0 +1,45 @@
+<div class="cabana-card-grande">
+  <div class="cabana-info-comun">
+    <h3>{{ cabanaTipo.tipoNombre }}</h3>
+    <p class="card-subtitle">{{ cabanaTipo.capacidad }}</p>
+    <p class="card-description">{{ cabanaTipo.descripcion }}</p>
+
+    <div class="comodidades">
+      <h4>Comodidades:</h4>
+      <ul>
+        @for(comodidad of cabanaTipo.comodidades; track comodidad) {
+          <li>
+            <span class="material-icons">check_circle</span>
+            {{ comodidad }}
+          </li>
+        }
+      </ul>
+    </div>
+
+    <div class="servicios-cercanos">
+      <h4>Servicios Cercanos:</h4>
+      <ul>
+        @for(servicio of cabanaTipo.serviciosCercanos; track servicio) {
+          <li>
+            <span class="material-icons">directions_walk</span>
+            {{ servicio }}
+          </li>
+        }
+      </ul>
+    </div>
+  </div>
+
+  <div class="carousel-container">
+    <div class="carousel">
+      <img [src]="cabanaTipo.opciones[0].imagenes[currentIndex]"
+          [alt]="'Foto de la cabaña ' + cabanaTipo.opciones[0].nombre + ' ' + (currentIndex + 1)">
+      <button class="prev" (click)="prevImage()">&#10094;</button>
+      <button class="next" (click)="nextImage()">&#10095;</button>
+    </div>
+    <div class="carousel-dots">
+      @for(image of cabanaTipo.opciones[0].imagenes; track $index) {
+        <span [class.active]="$index === currentIndex" (click)="goToImage($index)"></span>
+      }
+    </div>
+  </div>
+</div>
